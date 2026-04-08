@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imessage-mcp"
+version = "0.1.0"
+description = "MCP server for Apple iMessage"
+requires-python = ">=3.9"
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[project.scripts]
+imessage-mcp = "server:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["server*"]
